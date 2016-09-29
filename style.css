@@ -7,18 +7,27 @@ a {
 }
 
 /*Modal*/
-.modalContent {
+.modalContentRg, .modalContentPc {
     font-family: Arial, Helvetica, sans-serif;
     opacity:0; /*makes modal disappear when closed clicked*/
 }
 
-.modalContent:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
+.modalContentRg:target, .modalContentPc:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
     opacity:1; /*needed to make the modal appear when routing guide is clicked*/
 }
-
-.modalContent > div {
+/*for routing guide*/
+.modalContentRg > div {
     width: 300px;
     height: 470px;
+    position: relative;
+    margin: 10% auto;
+    border-top-left-radius: 10px;
+    background-color: white;
+}
+/*for pre-chat*/
+.modalContentPc > div {
+    width: 300px;
+    height: 625px;
     position: relative;
     margin: 10% auto;
     border-top-left-radius: 10px;
@@ -52,7 +61,7 @@ a {
     width: 100px;
 }
 
-/*Content*/
+/*Content routing guide*/
 
 /*Nav*/
 nav {
@@ -69,7 +78,7 @@ ul li a {
     text-decoration: none;
 }
 
-/*Question*/
+/*this p tag is for both routing guide and pre chat*/
 p {
     font-weight: bold;
     padding-left: 20px;
@@ -102,7 +111,7 @@ p {
     color: white;
 }
 
-span {
+.spanRoutingGuide {
     font-size: 12px;
     position: relative;
     left: 10px;
@@ -123,6 +132,73 @@ span {
     bottom: 4px;
     left: 5px;
 }
+/*content pre chat*/
+.spanPrechat {
+    font-size: 12px;
+    position: relative;
+    left: 20px;
+}
+
+input {
+    width: 220px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #ecfad7;
+}
+
+select, textarea {
+    width: 250px;
+    position: relative;
+    left: 20px;
+}
+
+select {
+    height: 30px;
+    padding-left: 5px;
+}
+textarea {
+    resize: none;
+}
+
+button {
+    position: absolute;
+    right: 25px;
+    color: white;
+    background-color: #9bd400;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 25px;
+    font-size: 12px;
+    text-shadow: 1px 1px grey;
+
+}
+
+.spanRequiredText, .spanRedStar {
+    font-size: 9px;
+    color: grey;
+    position: relative;
+    left: 220px;
+    top: 10px;
+}
+
+.spanRedStar {
+    color: red;
+}
+
+.nameIcon {
+    background: url("assets/icon-form-avatar.png") 5px/15px no-repeat;
+    padding-left:35px;
+}
+
+.phoneIcon {
+    background: url("assets/icon-form-phone.png") 5px/15px no-repeat;
+    padding-left:35px;
+}
+
 /*footer*/
 #footer {
     position: absolute;
@@ -136,4 +212,3 @@ span {
     margin-left: 5px;
     width: 100px;
 }
-
