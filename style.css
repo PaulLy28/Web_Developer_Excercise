@@ -1,0 +1,139 @@
+body {
+    background: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Modal*/
+.modalContent {
+    font-family: Arial, Helvetica, sans-serif;
+    opacity:0; /*makes modal disappear when closed clicked*/
+}
+
+.modalContent:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
+    opacity:1; /*needed to make the modal appear when routing guide is clicked*/
+}
+
+.modalContent > div {
+    width: 300px;
+    height: 470px;
+    position: relative;
+    margin: 10% auto;
+    border-top-left-radius: 10px;
+    background-color: white;
+}
+
+#header {
+    border-bottom: 3px solid #cded1a;
+    border-top-left-radius: 10px;
+    padding: 20px;
+    background-color: black;
+}
+
+.close {
+    line-height: 25px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    top: 8px;
+    width: 15px;
+}
+
+.close:hover {
+    background: #00d9ff;
+}
+
+#logoTop {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+}
+
+/*Content*/
+
+/*Nav*/
+nav {
+    font-size: 12px;
+    padding-top: 10px;
+    transform: translateX(-20px);
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+/*Question*/
+p {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+/*Main links and content in body*/
+.bodyTextLinks {
+    color: black;
+}
+
+.links {
+    height: 40px;
+    padding-left: 20px;
+}
+
+.bodyLinksImg {
+    width: 25px;
+    position: relative;
+    top: 8px;
+}
+
+.links:hover {
+    background: #f3ffe0;
+    color: #99bd77;
+}
+
+.links:active {
+    background: #9bd400;
+    color: white;
+}
+
+span {
+    font-size: 12px;
+    position: relative;
+    left: 10px;
+}
+
+.backLink {
+    color: gray;
+}
+
+.backArrow {
+    width: 20px;
+}
+
+.backText {
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+}
+/*footer*/
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #cecfcc;
+}
+
+.footerLogo {
+    margin-left: 5px;
+    width: 100px;
+}
+
