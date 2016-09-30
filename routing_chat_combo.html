@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing Chat combo</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+<!--<a href="#routingGuide">Routing Guide</a>-->
+
+<div class="modalContentRgPc">
+    <div id="mainContentBody">
+        <div id="header">
+            <img id="logoTop" src="assets/logo-best-brands.png" alt=logo">
+            <a href="#close" title="close" class="close">
+                <img class="close" src="assets/btn-close.png" alt="close_btn" />
+            </a>
+        </div>
+
+        <div id="mainContent"></div>
+
+<!--footer-->
+        <div id="footer">
+            <img class="footerLogo" src="assets/logo-tc.png" alt="logo_tc">
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="routingTemplate">
+    <nav>
+        <ul>
+            <li><a href="#" class="navLinks" id="home">Home</a> /</li>
+            <li><a href="#" class="navLinks" id="service">Existing Service</a> /</li>
+            <li><a href="#" class="navLinks" id="mobile">Mobile</a></li>
+        </ul>
+
+    </nav>
+
+    <p>Which Mobile topic would you like help with?</p>
+
+    <div class="contentBody">
+        <a class="bodyTextLinks" id="billing" href="#">
+            <div class="links">
+                <img class="bodyLinksImg"  src="assets/bill.png" alt="billing_payment">
+                <span class="spanRoutingGuide">Billing and Payments</span>
+            </div>
+        </a><br>
+
+        <a class="bodyTextLinks" href="#">
+            <div class="links">
+                <img class="bodyLinksImg" src="assets/tech_support.png" alt="tech_support"/>
+                <span class="spanRoutingGuide">Technical Support</span>
+            </div>
+        </a><br>
+
+        <a class="bodyTextLinks" href="#">
+            <div class="links">
+                <img class="bodyLinksImg" src="assets/acct_login.png" alt="acct_login">
+                <span class="spanRoutingGuide">Account Login Support</span>
+            </div>
+        </a><br>
+
+        <a class="bodyTextLinks" href="#">
+            <div class="links">
+                <img class="bodyLinksImg" src="assets/other.png" alt="other">
+                <span class="spanRoutingGuide">Other</span>
+            </div>
+        </a><br><br>
+
+        <a class="backLink" href="#">
+            <div class="links">
+                <img class="backArrow" src="assets/back_arrow.png" alt="back_arrow">
+                <span class="backText">Back</span>
+            </div>
+        </a>
+    </div>
+
+    </div>
+</script>
+
+<script type="text/html" id="prechatTemplate">
+    <!--pre chat content-->
+            <p>Which Mobile topic would you like help with?</p>
+
+            <form action="#">
+                <span class="spanPrechat">Full Name:*</span><br>
+                <input class="nameIcon" id="fullName" type="text" name="fullname" placeholder="John Doe"><br>
+                <span id="errorTextName">Full Name is a required field.</span><br>
+
+                <span class="spanPrechat">Mobile Phone Number:*</span><br>
+                <input class="phoneIcon" id="phoneNumber" type="tel" name="phoneNumber" placeholder="ex: 123-123-1234"><br>
+                <span id="errorTextPhone">Mobile number is a required field.</span><br>
+
+                <span class="spanPrechat">State:</span><br>
+                <select name="states" id="selState">
+                    <option value="" disabled selected>Select One</option>
+                    <option value="california">California</option>
+                    <option value="Texas">Texas</option>
+                </select><br><br>
+
+                <div id="bought">
+                <span class="spanPrechat">Was your phone purchased in CA?</span><br>
+                <select name="purchase" id="yesOrNo">
+                    <option value="" disabled selected>Select One</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+                </div>
+
+                <span class="spanPrechat">Describe your question...</span>
+                <textarea name="description" id="question" cols="30" rows="5"></textarea><br><br>
+
+                <button type="submit" id="submitBtn">Start Chat</button><br>
+                <span class="spanRedStar">*</span><span class="spanRequiredText">Required field</span>
+            </form>
+</script>
+
+<script type="text/html" id="chatAgentTemplate">
+    <p>Congratulations!! You have reached the chat agent.</p>
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

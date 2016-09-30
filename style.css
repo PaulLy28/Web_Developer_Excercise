@@ -1,0 +1,257 @@
+body {
+    background: gray;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Modal*/
+.modalContentRg, .modalContentPc {
+    font-family: Arial, Helvetica, sans-serif;
+    opacity:0; /*makes modal disappear when closed clicked*/
+
+}
+
+.modalContentRg:target, .modalContentPc:target, .modalContentRgPc:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
+    opacity:1; /*needed to make the modal appear when routing guide is clicked*/
+}
+/*for routing guide*/
+.modalContentRg > div, .modalContentRgPc > div {
+    width: 300px;
+    height: 470px;
+    position: relative;
+    margin: 10% auto;
+    border-top-left-radius: 10px;
+    background-color: white;
+}
+/*for pre-chat*/
+.modalContentPc > div {
+    width: 300px;
+    height: 625px;
+    position: relative;
+    margin: 10% auto;
+    border-top-left-radius: 10px;
+    background-color: white;
+}
+
+#header {
+    border-bottom: 3px solid #cded1a;
+    border-top-left-radius: 10px;
+    padding: 20px;
+    background-color: black;
+}
+
+.close {
+    line-height: 25px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    top: 8px;
+    width: 15px;
+}
+
+.close:hover {
+    background: #00d9ff;
+}
+
+#logoTop {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+}
+
+/*Content routing guide*/
+
+/*Nav*/
+nav {
+    font-size: 12px;
+    padding-top: 10px;
+    transform: translateX(-20px);
+}
+
+ul li {
+    display: inline;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #99bd77;
+}
+/*setting the Mobile link to grey to show its active since this is the templateTitle that it is currently on*/
+#mobile {
+    color: grey;
+}
+/*if you click (and hold for this mock-up) the other links in nav it will turn grey to show active*/
+.navLinks:active {
+    color: grey;
+}
+
+/*this p tag is for both routing guide and pre chat*/
+p {
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+/*Main links and content in body*/
+.bodyTextLinks {
+    color: black;
+}
+
+.links {
+    height: 40px;
+    padding-left: 20px;
+}
+
+.bodyLinksImg {
+    width: 25px;
+    position: relative;
+    top: 8px;
+}
+
+.links:hover {
+    background: #f3ffe0;
+    color: #99bd77;
+}
+
+.links:active {
+    background: #9bd400;
+    color: white;
+}
+
+.spanRoutingGuide {
+    font-size: 12px;
+    position: relative;
+    left: 10px;
+}
+
+.backLink {
+    color: gray;
+}
+
+.backArrow {
+    width: 20px;
+}
+
+.backText {
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+}
+/*content pre chat*/
+.spanPrechat {
+    font-size: 12px;
+    position: relative;
+    left: 20px;
+}
+
+input {
+    width: 220px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #ecfad7;
+}
+
+select, textarea {
+    width: 250px;
+    position: relative;
+    left: 20px;
+}
+
+select {
+    height: 30px;
+    padding-left: 5px;
+}
+textarea {
+    resize: none;
+}
+
+button {
+    position: absolute;
+    right: 25px;
+    color: white;
+    background-color: #9bd400;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 25px;
+    font-size: 12px;
+    text-shadow: 1px 1px grey;
+
+}
+
+.spanRequiredText, .spanRedStar {
+    font-size: 9px;
+    color: grey;
+    position: relative;
+    left: 220px;
+    top: 10px;
+}
+
+.spanRedStar {
+    color: red;
+}
+
+.nameIcon {
+    background: url("assets/icon-form-avatar.png") 5px/15px no-repeat;
+    padding-left:35px;
+}
+
+.phoneIcon {
+    background: url("assets/icon-form-phone.png") 5px/15px no-repeat;
+    padding-left:35px;
+}
+
+
+
+input.border {
+    border: 1px solid red;
+}
+
+
+/*routing_chat combo section*/
+#bought {
+    display: none;
+}
+
+.iconError {
+    background-image: url("assets/icon-form-avatar.png"), url("assets/icon-form-error.png");
+    background-position: 2% 50%, 98% 50%;
+    background-size: 15px;
+    background-repeat: no-repeat, no-repeat;
+    padding-left: 35px;
+    background-color: pink;
+    border: 1px solid red;
+}
+
+#errorTextName, #errorTextPhone {
+    font-size: 9px;
+    color: pink;
+    position: absolute;
+    right: 22px;
+    margin-top: 3px;
+    display: none;
+}
+
+/*footer*/
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #cecfcc;
+}
+
+.footerLogo {
+    margin-left: 5px;
+    width: 100px;
+}
+

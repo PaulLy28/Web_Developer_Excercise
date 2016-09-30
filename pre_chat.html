@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-chat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<a href="#prechat">Pre-chat</a>
+
+
+<div id="prechat" class="modalContentPc">
+    <div>
+        <div id="header">
+            <img id="logoTop" src="assets/logo-best-brands.png" alt=logo">
+            <a href="#close" title="close" class="close"><img class="close" src="assets/btn-close.png" alt="close_btn" /></a>
+        </div><br>
+
+        <p>Which Mobile topic would you like help with?</p>
+
+        <form action="#">
+            <span class="spanPrechat">Full Name:*</span><br>
+            <input class="nameIcon" type="text" name="fullname" placeholder="John Doe"><br><br>
+
+            <span class="spanPrechat">Mobile Phone Number:*</span><br>
+            <input class="phoneIcon" type="tel" name="phoneNumber" placeholder="ex: 123-123-1234"><br><br>
+
+            <span class="spanPrechat">State:</span><br>
+            <select name="states" id="selState">
+                <option value="" disabled selected>Select One</option>
+                <option value="california">California</option>
+            </select><br><br>
+
+            <span class="spanPrechat">Describe your question...</span>
+            <textarea name="description" id="question" cols="30" rows="5"></textarea><br><br>
+
+            <button type="submit">Start Chat</button><br>
+            <span class="spanRedStar">*</span><span class="spanRequiredText">Required field</span>
+        </form>
+
+        <div id="footer">
+            <img class="footerLogo" src="assets/logo-tc.png" alt="logo_tc">
+        </div>
+    </div>
+</div>
+</body>
+</html>
