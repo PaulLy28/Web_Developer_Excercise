@@ -1,1 +1,1 @@
-# Web_Developer_Excercise
+# Web_Developer_Exercise
