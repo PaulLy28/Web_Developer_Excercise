@@ -1,5 +1,6 @@
 body {
     background: gray;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 a {
@@ -10,13 +11,14 @@ a {
 .modalContentRg, .modalContentPc {
     font-family: Arial, Helvetica, sans-serif;
     opacity:0; /*makes modal disappear when closed clicked*/
+
 }
 
-.modalContentRg:target, .modalContentPc:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
+.modalContentRg:target, .modalContentPc:target, .modalContentRgPc:target { /*target selector looks at the href selected and applies the css to the tag that the href is pointing to*/
     opacity:1; /*needed to make the modal appear when routing guide is clicked*/
 }
 /*for routing guide*/
-.modalContentRg > div {
+.modalContentRg > div, .modalContentRgPc > div {
     width: 300px;
     height: 470px;
     position: relative;
@@ -76,6 +78,15 @@ ul li {
 
 ul li a {
     text-decoration: none;
+    color: #99bd77;
+}
+/*setting the Mobile link to grey to show its active since this is the templateTitle that it is currently on*/
+#mobile {
+    color: grey;
+}
+/*if you click (and hold for this mock-up) the other links in nav it will turn grey to show active*/
+.navLinks:active {
+    color: grey;
 }
 
 /*this p tag is for both routing guide and pre chat*/
@@ -199,6 +210,37 @@ button {
     padding-left:35px;
 }
 
+
+
+input.border {
+    border: 1px solid red;
+}
+
+
+/*routing_chat combo section*/
+#bought {
+    display: none;
+}
+
+.iconError {
+    background-image: url("assets/icon-form-avatar.png"), url("assets/icon-form-error.png");
+    background-position: 2% 50%, 98% 50%;
+    background-size: 15px;
+    background-repeat: no-repeat, no-repeat;
+    padding-left: 35px;
+    background-color: pink;
+    border: 1px solid red;
+}
+
+#errorTextName, #errorTextPhone {
+    font-size: 9px;
+    color: pink;
+    position: absolute;
+    right: 22px;
+    margin-top: 3px;
+    display: none;
+}
+
 /*footer*/
 #footer {
     position: absolute;
@@ -212,3 +254,4 @@ button {
     margin-left: 5px;
     width: 100px;
 }
+
